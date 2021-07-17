@@ -6,7 +6,15 @@
 * browser.version - версия браузера
 
 ### Пример запуска тестов
-Запустить тесты с дефолтными параметрами:
+Запуск тестов локально:
+```bash
+gradle clean test -Dstage=local
+```
+Запуск тестов удаленно:
+```bash
+gradle clean test -Dstage=remote
+```
+Запуск тестов с параметрами:
 ```bash
 gradlew clean test -Dbrowser.remote=true -Dremote.url=https://user1:1234@selenoid.autotests.cloud/wd/hub/ -Dbrowser.name=chrome -Dbrowser.version=90.0
 ```
